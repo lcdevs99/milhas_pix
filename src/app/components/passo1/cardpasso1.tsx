@@ -1,5 +1,5 @@
 "use client";
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter, usePathname } from "next/navigation";
 import {
   PageWrapper,
   ContentRow,
@@ -51,7 +51,7 @@ const passos = [
 
 export default function TelaCompleta() {
   const pathname = usePathname();
-  const passoAtual = parseInt(pathname.replace('/passo', '')) || 1;
+  const passoAtual = parseInt(pathname.replace("/passo", "")) || 1;
   const router = useRouter();
 
   return (
@@ -61,17 +61,17 @@ export default function TelaCompleta() {
           {passos.map((label, index) => {
             const passoIndex = index + 1;
             const isActive = passoAtual === passoIndex;
-            let imageSrc = '';
+            let imageSrc = "";
 
             if (passoIndex === 1) {
-              imageSrc = isActive ? '/Frame.png' : '/Frame1.png';
+              imageSrc = isActive ? "/Frame.png" : "/Frame1.png";
             } else {
               if (isActive) {
-                imageSrc = '/Frameetapaatual.png';
+                imageSrc = "/Frameetapaatual.png";
               } else if (passoIndex < passoAtual) {
-                imageSrc = '/Frame234.png';
+                imageSrc = "/Frame234.png";
               } else {
-                imageSrc = '/FrameApagado.png';
+                imageSrc = "/FrameApagado.png";
               }
             }
 
@@ -80,13 +80,18 @@ export default function TelaCompleta() {
                 key={index}
                 $active={isActive}
                 onClick={() => router.push(`/passo${passoIndex}`)}
-                style={{ cursor: 'pointer' }}
+                style={{ cursor: "pointer" }}
               >
                 <StepContent>
-                  <StepImage src={imageSrc} alt={`Ícone do passo ${passoIndex}`} />
+                  <StepImage
+                    src={imageSrc}
+                    alt={`Ícone do passo ${passoIndex}`}
+                  />
                   <StepText>
                     <StepTitle $active={isActive}>Passo {passoIndex}</StepTitle>
-                    <StepDescription $active={isActive}>{label}</StepDescription>
+                    <StepDescription $active={isActive}>
+                      {label}
+                    </StepDescription>
                   </StepText>
                 </StepContent>
               </StepItem>
@@ -101,8 +106,6 @@ export default function TelaCompleta() {
               <StepTextMain>Escolha o programa de fidelidade</StepTextMain>
             </CardHeaderTitle>
           </CardHeader>
-
-          {/* Desktop logos */}
           <CardCompanies>
             <LogosContainer>
               <CompanyLogo src="/tudoAzul.png" alt="TudoAzul" />
@@ -111,21 +114,17 @@ export default function TelaCompleta() {
               <CompanyLogo src="/air.png" alt="TAP Air Portugal" />
             </LogosContainer>
           </CardCompanies>
-
-          {/* Mobile input substituto */}
           <CardItem2Mobile>
             <InputItemMobile>
               <img
-                      src="/ArrowsCounterClockwise.png"
-                      alt="Etapa 03"
-                      width={20}
-                      height={20}
-                    />
+                src="/ArrowsCounterClockwise.png"
+                alt="Etapa 03"
+                width={20}
+                height={20}
+              />
               <InputText>Tudo Azul</InputText>
             </InputItemMobile>
           </CardItem2Mobile>
-
-          {/* Inputs empilhados no mobile */}
           <CardProduto>
             <InputGroup>
               <Label>Produto</Label>
@@ -143,9 +142,9 @@ export default function TelaCompleta() {
             </InputGroup>
           </CardProduto>
         </CardContainer>
-          <MobileProgramHeader>
-  Selecione o programa <PlusIcon>+</PlusIcon>
-</MobileProgramHeader>
+        <MobileProgramHeader>
+          Selecione o programa <PlusIcon>+</PlusIcon>
+        </MobileProgramHeader>
 
         <InfoCard>
           <InfoContent>
@@ -154,21 +153,21 @@ export default function TelaCompleta() {
               <CloseIcon />
             </InfoTitle>
             <InfoText>
-              Escolha de qual programa de fidelidade você quer vender suas milhas. Use apenas contas em seu nome.
+              Escolha de qual programa de fidelidade você quer vender suas
+              milhas. Use apenas contas em seu nome.
             </InfoText>
           </InfoContent>
         </InfoCard>
       </ContentRow>
 
       <Footer>
-  <StepCounter><span>1</span> de 4</StepCounter>
-  <ProceedButton onClick={() => router.push('/passo2')}>
-    Prosseguir <ArrowIcon>→</ArrowIcon>
-  </ProceedButton>
-</Footer>
-
-
+        <StepCounter>
+          <span>1</span> de 4
+        </StepCounter>
+        <ProceedButton onClick={() => router.push("/passo2")}>
+          Prosseguir <ArrowIcon>→</ArrowIcon>
+        </ProceedButton>
+      </Footer>
     </PageWrapper>
   );
 }
-
