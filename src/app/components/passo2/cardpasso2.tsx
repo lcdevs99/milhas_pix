@@ -159,36 +159,33 @@ export default function CardPasso2() {
                   </LockedInput>
                 </InputGroup>
               </InputsRow>
-                <PrecoBoxMobile>
-    Escolha entre <strong>R$ 14,00</strong> e <strong>R$ 16,66</strong>
-  </PrecoBoxMobile>
-  <RankingCardMobile>
-  <RankingItemMobile>
-    <span className="posicao">1º</span>
-    <span className="valor">R$ 15,23</span>
-  </RankingItemMobile>
-  <RankingItemMobile>
-    <span className="posicao">2º</span>
-    <span className="valor">R$ 15,23</span>
-  </RankingItemMobile>
-  <RankingItemMobile>
-    <span className="posicao">3º</span>
-    <span className="valor">R$ 15,23</span>
-  </RankingItemMobile>
-  <RankingItemMobile destaque="true">
-    <span className="voce">Você</span>
-    <span className="posicao">4º</span>
-    <span className="valor">R$ 25,35</span>
-  </RankingItemMobile>
-  <RankingItemMobile>
-    <span className="posicao">5º</span>
-    <span className="valor">R$ 15,23</span>
-  </RankingItemMobile>
-</RankingCardMobile>
-
-
-
-              {/* ✅ Toggle substituindo ImagemFinal */}
+              <PrecoBoxMobile>
+                Escolha entre <strong>R$ 14,00</strong> e{" "}
+                <strong>R$ 16,66</strong>
+              </PrecoBoxMobile>
+              <RankingCardMobile>
+                <RankingItemMobile>
+                  <span className="posicao">1º</span>
+                  <span className="valor">R$ 15,23</span>
+                </RankingItemMobile>
+                <RankingItemMobile>
+                  <span className="posicao">2º</span>
+                  <span className="valor">R$ 15,23</span>
+                </RankingItemMobile>
+                <RankingItemMobile>
+                  <span className="posicao">3º</span>
+                  <span className="valor">R$ 15,23</span>
+                </RankingItemMobile>
+                <RankingItemMobile destaque="true">
+                  <span className="voce">Você</span>
+                  <span className="posicao">4º</span>
+                  <span className="valor">R$ 25,35</span>
+                </RankingItemMobile>
+                <RankingItemMobile>
+                  <span className="posicao">5º</span>
+                  <span className="valor">R$ 15,23</span>
+                </RankingItemMobile>
+              </RankingCardMobile>
               <ToggleWrapper onClick={() => setMediaAtiva(!mediaAtiva)}>
                 <img
                   src={
@@ -235,9 +232,6 @@ export default function CardPasso2() {
               Prosseguir <ArrowIcon>→</ArrowIcon>
             </ProceedButton>
           </Footer>
-          
-
-
         </CardSection>
 
         <InfoCardsColumn>
@@ -297,16 +291,16 @@ export default function CardPasso2() {
             <RecebaTextoMobile>R$24.325,23</RecebaTextoMobile>
           </RecebaBoxMobile>
           <FooterMobile>
-  <BackIcon onClick={() => router.push("/passo1")}>←</BackIcon>
+            <BackIcon onClick={() => router.push("/passo1")}>←</BackIcon>
 
-  <StepCounterMobile>
-    <span>2</span> de 4
-  </StepCounterMobile>
+            <StepCounterMobile>
+              <span>2</span> de 4
+            </StepCounterMobile>
 
-  <ProceedButtonMobile onClick={() => router.push("/passo3")}>
-    Prosseguir <ArrowIcon>→</ArrowIcon>
-  </ProceedButtonMobile>
-</FooterMobile>
+            <ProceedButtonMobile onClick={() => router.push("/passo3")}>
+              Prosseguir <ArrowIcon>→</ArrowIcon>
+            </ProceedButtonMobile>
+          </FooterMobile>
         </InfoCardsColumn>
       </ContentRow>
     </PageWrapper>
