@@ -338,7 +338,8 @@ export const ProceedButtonMobile = styled.button`
   gap: 4px;
 `;
 
-export const RankingItemMobile = styled.div<{ destaque?: boolean }>`
+export const RankingItemMobile = styled.div<{ destaque?: string
+ }>`
   display: flex;
   flex-direction: row;
   justify-content: center;
