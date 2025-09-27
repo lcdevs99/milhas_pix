@@ -436,34 +436,57 @@ export const Footer = styled.footer`
   justify-content: flex-end;
   align-items: center;
   gap: 16px;
-
   @media (max-width: 768px) {
-    padding: 24px 16px;
-    justify-content: space-between;
+  display:none;
   }
 `;
 
-
-
-
-
-export const StepCounter = styled.div`
+export const FooterMobile = styled.div`
   display: none;
 
   @media (max-width: 768px) {
-    display: block;
-    flex: 1;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 500;
-    color: #2e3d50;
+    display: flex;
+    justify-content: center; /* centraliza o StepCounter */
+    align-items: center;
+    padding: 12px 16px;
+    border-top: 1px solid #e2e2e2;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+`;
 
-    span {
+export const StepCounterMobile = styled.div`
+  font-size: 14px;
+  font-weight: 500;
+  color: #2e3d50;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  span {
       color: #2563eb;
       font-weight: 600;
     }
-  }
 `;
+
+export const ProceedButtonMobile = styled.button`
+  background-color: #1e90ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+`;
+
 
 export const ProceedButton = styled.button`
   color: #fff;
@@ -482,10 +505,6 @@ export const ProceedButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  @media (max-width: 768px) {
-    width: 38%;
-  }
 `;
 
 export const ArrowIcon = styled.span`

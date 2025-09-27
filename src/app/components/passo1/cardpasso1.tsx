@@ -39,7 +39,9 @@ import {
   InputItemMobile,
   MobileProgramHeader,
   PlusIcon,
-  StepCounter,
+  FooterMobile,
+  StepCounterMobile,
+  ProceedButtonMobile,
 } from "./cardpasso1.styles";
 
 const passos = [
@@ -162,13 +164,19 @@ export default function TelaCompleta() {
       </ContentRow>
 
       <Footer>
-        <StepCounter>
-          <span>1</span> de 4
-        </StepCounter>
         <ProceedButton onClick={() => router.push("/passo2")}>
           Prosseguir <ArrowIcon>→</ArrowIcon>
         </ProceedButton>
       </Footer>
+      <FooterMobile>
+        <StepCounterMobile>
+          <span>1</span> de 4
+        </StepCounterMobile>
+
+        <ProceedButtonMobile onClick={() => router.push("/passo3")}>
+          Prosseguir <ArrowIcon>→</ArrowIcon>
+        </ProceedButtonMobile>
+      </FooterMobile>
     </PageWrapper>
   );
 }
