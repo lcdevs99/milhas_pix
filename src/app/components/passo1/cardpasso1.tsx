@@ -135,7 +135,8 @@ export default function TelaCompleta() {
               </ProdutoSelect>
             </InputGroup>
             <InputGroup>
-              <Label>CPF's Disponíveis</Label>
+              <Label>CPFs Disponíveis</Label>
+
               <LockedInput>
                 <span>limitado</span>
               </LockedInput>
